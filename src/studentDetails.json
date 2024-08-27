@@ -1,0 +1,26 @@
+{
+  "2022037933": {
+    "name": "Thummar Jenil Hareshbhai",
+    "branch": "Bachelor of Computer Applications (B.C.A 2022-2025)",
+    "college": "SIES GROUP OF SCIENCE AND TECHNOLOGY College, NERUL, NAVI-MUMBAI",
+    "semester": "SEM 3",
+    "image": "./image/AboutUs1.jpg",
+    "attendance": {
+      "dates": ["2022-01-01", "2022-01-02", "2022-01-03", "2022-01-04", "2022-01-05","2022-01-05","2022-01-06","2022-01-07"],
+      "theory": {
+        "SM": [1, 1, 0, 0, 1],
+        "SE": [1, 0, 1, 0, 1],
+        "DHP": [0, 1, 1, 1, 1],
+        "OOPS": [1, 1, 1, 0, 1],
+        "WD-I": [1, 1, 1, 1, 1]
+      },
+      "practical": {
+        "SM": [1, 1, 0, 1, 1],
+        "SE": [1, 0, 1, 1, 1],
+        "DHP": [0, 1, 1, 1, 1],
+        "OOPS": [1, 1, 1, 0, 1],
+        "WD-I": [1, 0, 1, 0, 1]
+      }
+    }
+  }
+}

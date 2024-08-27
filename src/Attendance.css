@@ -1,0 +1,82 @@
+.attendance {
+  background-color: #ffa726 ;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  margin-top: 40px;
+}
+
+.attendance-cards {
+  display: flex;
+  gap: 20px;
+}
+
+.attendance-card {
+  flex: 1;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+.attendance-card h4 {
+  margin-bottom: 20px;
+  color: #2c3e50;
+}
+
+.attendance-record {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.attendance-record span {
+  font-size: 18px;
+  color: #666;
+}
+
+.progress-bar {
+  flex-grow: 1;
+  background-color: #ddd;
+  margin: 0 10px;
+  height: 15px;
+  border-radius: 7.5px;
+}
+
+.progress {
+  height: 100%;
+  border-radius: 7.5px;
+}
+
+.progress.green {
+  background-color: #66bb6a;
+}
+
+.progress.red {
+  background-color: #ef5350;
+}
+
+@media (max-width: 768px) {
+  .attendance-cards {
+    flex-direction: column;
+  }
+
+  .attendance-record span {
+    font-size: 16px;
+  }
+
+  .progress-bar {
+    height: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .attendance-record span {
+    font-size: 14px;
+  }
+
+  .progress-bar {
+    height: 10px;
+  }
+}

@@ -1,0 +1,62 @@
+.login-container {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  background-color: #ffa726;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  height: auto;
+  max-width: 800px;
+  margin: 20px auto; /* Center the container and give it some vertical space */
+}
+
+.logo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo-image {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 3px solid #ffa726;
+}
+
+.student-details {
+  flex: 2;
+  padding-left: 20px;
+}
+
+.student-details h2 {
+  font-size: 28px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.student-details p {
+  font-size: 18px;
+  color: #666;
+  margin: 5px 0;
+}
+
+@media (max-width: 768px) {
+  .login-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .student-details {
+    padding-left: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .student-details h2 {
+    font-size: 24px;
+  }
+
+  .student-details p {
+    font-size: 16px;
+  }
+}

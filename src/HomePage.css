@@ -1,0 +1,74 @@
+/* Ensuring the entire container takes up full viewport */
+.homepage-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #1f4037, #99f2c8); /* Professional background */
+  }
+  
+  /* Cart container to hold the logo, text, and buttons */
+  .cart-container {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    max-width: 400px;
+    width: 100%;
+  }
+  
+  /* Logo styles */
+  .logo {
+    max-width: 200px;
+    max-height: 400PX;
+    margin-bottom: 20px;
+  }
+  
+  /* Text at the top */
+  .welcome-text {
+    font-size: 24px;
+    color: #2c3e50;
+    margin-bottom: 30px;
+  }
+  
+  /* Grouping buttons */
+  .button-group {
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  /* Button styles */
+  .btn {
+    background-color: #ffa726;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 120px;
+  }
+  
+  .btn:hover {
+    background-color: #fb8c00;
+  }
+  
+  /* Additional styles for login and signup buttons if needed */
+  .login-btn {
+    background-color: #42a5f5;
+  }
+  
+  .login-btn:hover {
+    background-color: #1e88e5;
+  }
+  
+  .signup-btn {
+    background-color: #66bb6a;
+  }
+  
+  .signup-btn:hover {
+    background-color: #43a047;
+  }
+  

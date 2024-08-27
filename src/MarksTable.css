@@ -1,0 +1,28 @@
+.marks-table {
+  background-color: #ffffff;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  margin-bottom: 20px;
+  height:400px ;
+}
+
+.marks-table table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.marks-table th, .marks-table td {
+  border: 1px solid #ddd;
+  padding: 4px;
+  text-align: center;
+}
+
+.marks-table th {
+  background-color: #f4f4f4;
+  font-weight: bold;
+}
+
+.marks-table td {
+  font-size: 16px;
+}

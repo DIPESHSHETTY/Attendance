@@ -1,0 +1,191 @@
+*{
+	margin:0px;
+	padding:0px;
+}
+
+nav .nav-link{
+	color:white;
+}
+nav img{
+	width:100%;
+	height:50px !important;
+}
+.nav-part-2 .nav-link{
+	font-size:1.2rem;
+	font-weight:lighter;
+	color:white !important;
+	transition:all 0.2s;
+} 
+.nav-part-2 .nav-link:hover {
+	font-size:1.3rem;
+	font-weight:bolder;
+	color:#EDCD1F !important;
+}
+nav button{
+	border:0px !important;
+}
+.services-content{
+	color:#1E2D3B;
+}
+.text-body a {
+	color:#EDCD1F !important;
+}
+@media screen and (max-width:992px){
+	.nav-container{
+		background:#EDCD1F !important;
+		/*background:	#e0d9b5 !important*/
+		/*background: transparent !important;*/
+		/*background:rgba(0,0,0,0.6 )!important;*/
+	}
+	nav{
+		background:#EDCD1F !important;
+		/*background: transparent !important; */
+	}
+	.nav-brand{
+		background: transparent !important;
+	}
+}
+@media screen and (max-width:992px) and (min-width:576px){
+	nav img{
+		width:100%;
+		height:70px;
+	}
+}
+@media screen and (max-width:576px) {
+	nav img{
+		width:150px;
+		height:30px;
+	}
+}
+
+/*header*/
+header h2{
+	color:white !important;
+	font-weight: bolder !important;
+	text-align:center;
+	font-size:3.5rem !important;
+	font-family:monaco
+}
+.header-down-arrow{
+	animation: slide 3s infinite ease;
+}
+@keyframes slide {
+    0% {
+        transform: translateY(-100%);
+    }
+    100% {
+        transform: translateY(0%);
+    }
+}
+
+.element {
+    animation: slide 5s linear infinite;
+}
+@media screen and (max-width:768px){
+	header .container-fluid{
+		height:600px !important;
+	}
+}
+@media screen and (max-width:576px) {
+	.header-content{
+		padding-top:0px !important;
+		top:120px;
+	}
+	.header-content h2{
+		font-size:2rem !important
+	}
+	
+}
+@media screen and (max-width:992px) and (min-width:576px)  {
+	.header-content{
+		padding-top:0px !important;
+		top:100px;
+	}
+	.header-content h2{
+		font-size:3rem !important
+	}
+	
+}
+
+
+/* Services */
+.about-us {
+    position: relative;
+    overflow: hidden;
+}
+.about-us .container {
+    position: relative;
+    z-index: 1;
+}
+@media screen and (min-width:992px){
+	.about-us::after {
+		content: "";
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		width: 50%;
+		height:100%;
+		background-image: url('../src/images/AboutUs.webp'); 
+		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
+		z-index: 0;
+		background-attachment: fixed;
+	}
+	.AboutUs{
+		/*/background:#eef0f2 !important;*/
+	}
+}
+
+@media screen and (max-width:992px){
+	.about-us h1{
+		padding-left:25px;
+		padding-right:25px;
+	}
+	.about-us .aboutUsLine{
+		margin-left:25px;
+	}
+	.about-us p{
+		padding-left:25px;
+		padding-right:25px;
+	}
+}
+@media screen and (max-width:576px) {
+	.about-us h1{
+		font-size:2.5rem !important;
+	}
+	.about-us .aboutUsLine{
+		width:130px !important;
+	}
+}
+
+/* counter */
+@media screen and (max-width:576px){
+	.Counter h2{
+		font-size:2.5rem !important;
+	}
+	.Counter h4{
+		font-size:1rem !important;
+	}
+}
+
+
+@media screen and (min-width:992px){
+	.Counter .establish, .Counter .contracters, .Counter .projects{
+		border-right:2px solid white;
+	}
+}
+
+/* services */
+@media screen and (max-width:576px){
+	.services h2{
+		font-size:2.5rem !important;
+	}
+	.services .servicesLine{
+		width:130px !important;
+	}
+}
+
+
+

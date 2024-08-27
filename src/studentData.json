@@ -1,0 +1,14 @@
+[
+    {
+      "studentId": "2022037933",
+      "events": [
+        { "name": "Tech Fest", "description": "Participated in the annual tech fest." }
+        
+      ],
+      "teams": [
+        { "name": "Web Development Team", "role": "Lead Developer" }
+       
+      ]
+    }
+  ]
+  

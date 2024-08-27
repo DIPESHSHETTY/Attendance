@@ -1,0 +1,24 @@
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  height: 200vh; /* Make sidebar take the full height of the viewport */
+}
+
+.settings {
+  margin-top: auto; /* Push the settings container to the bottom */
+  text-align: center;
+}
+
+.dark-mode-toggle {
+  background-color: #ffa726;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.dark-mode-toggle:hover {
+  background-color: #fb8c00;
+}
