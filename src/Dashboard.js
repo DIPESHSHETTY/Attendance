@@ -23,6 +23,7 @@ const Dashboard = () => {
     } catch (error) {
       console.error('Error fetching student data:', error);
       // Handle the error gracefully, e.g., display an error message or redirect
+      //hi
     }
   }, []);
 
