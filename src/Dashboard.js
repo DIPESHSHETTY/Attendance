@@ -1,4 +1,4 @@
-import React, { useEffect, useRef ,useState} from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 import './Dashboard.css';
 import studentDetails from './studentDetails.json';
@@ -6,12 +6,11 @@ import Login from './Login';
 import AttendanceTable from './AttendanceTable'; // Import the AttendanceTable component
 import Settings from './Settings';
 import StudentEvents from './StudentEvents';
-import Graph from './Graph';
+import Graph from './Graph'; // Import the Graph component
 import PieChart from './PieChart';
 import sies from './sies.png';
 import Leave from './Leave';
 import Attendance from './Attendance';
-import { Title } from 'chart.js';
 
 const Dashboard = () => {
   const [student, setStudent] = useState({});
@@ -22,8 +21,6 @@ const Dashboard = () => {
       setStudent(studentDetails['2022037933']); // Assuming student ID is the key
     } catch (error) {
       console.error('Error fetching student data:', error);
-      // Handle the error gracefully, e.g., display an error message or redirect
-      //hi
     }
   }, []);
 
@@ -34,7 +31,6 @@ const Dashboard = () => {
 
     const totalDays = attendanceData.dates.length;
 
-    // Calculate overall theory and practical attendance for each subject
     const theoryAttendance = Object.keys(attendanceData.theory).map((subject) => {
       const attendedClasses = attendanceData.theory[subject].reduce((acc, curr) => acc + curr, 0);
       return {
@@ -83,6 +79,7 @@ const Dashboard = () => {
             <h1 style={{ color: "#2c3e50" }}>STUDENT DASHBOARD</h1>
           </div>
           <Routes>
+            {/* Main Dashboard View */}
             <Route path="/" element={
               <div className="content-columns">
                 <div className="left-column">
@@ -90,7 +87,6 @@ const Dashboard = () => {
                   <div className="attendance-section">
                     <h2>Attendance Records</h2>
                     <Attendance attendance={attendanceData} title="Attendance Records" />
-
                   </div>
                   <div className="event">
                     <StudentEvents studentId={student.studentId} />
@@ -108,8 +104,19 @@ const Dashboard = () => {
                   </div>
                 </div>
               </div>
-            }/>
-            <Route path="/graph" element={<Graph />} />
+            } />
+            
+            {/* Attendance Graph View */}
+            <Route path="/graph" element={
+              <div className="content-columns">
+                <div className="left-column">
+                  <div className="attendance-graph">
+                    <Graph />
+                  </div>
+                </div>
+              </div>
+            } />
+            
             <Route path="/leave-application" element={<Leave />} />
           </Routes>
         </div>

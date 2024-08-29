@@ -1,8 +1,7 @@
+/* General styles for the dashboard */
 .dashboard-container {
   display: flex;
   min-height: 100vh;
-  justify-content: center;
-  align-items: center;
   overflow: hidden;
 }
 
@@ -13,10 +12,10 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  position: fixed; /* Fix the sidebar to the left */
+  position: fixed;
   top: 0;
   left: 0;
-  height: 100vh; /* Full height of the window */
+  height: 100vh;
   padding: 20px;
 }
 
@@ -84,6 +83,7 @@
   flex-grow: 1;
   justify-content: center;
   align-items: flex-start;
+  gap: 20px;
 }
 
 .left-column {
@@ -119,7 +119,7 @@
 .cards-container {
   display: flex;
   justify-content: space-between;
-  width: 100%; /* Ensure full width for responsiveness */
+  width: 100%;
 }
 
 .attendance-card {
@@ -133,12 +133,12 @@
 
 .event {
   margin-top: 20px;
-  width: 100%; /* Ensure full width for responsiveness */
+  width: 100%;
 }
 
 .settings {
   text-align: center;
-  margin-top: auto; /* Push the button to the bottom */
+  margin-top: auto;
 }
 
 .dark-mode-toggle {
@@ -159,7 +159,7 @@
   display: flex;
   flex-direction: column;
   gap: 20px;
-  width: 100%; /* Ensure full width for responsiveness */
+  width: 100%;
 }
 
 .chart-card {
@@ -172,7 +172,7 @@
   align-items: center;
   height: 150px;
   position: relative;
-  flex: 1; /* Allow cards to expand to fill available space */
+  flex: 1;
 }
 
 .chart-card canvas {
@@ -205,6 +205,17 @@
     opacity: 1;
     transform: scale(1);
   }
+}
+.graph-container canvas {
+  width: 1546px !important; /* Set the canvas width to 1000px */
+  height: auto !important;  /* Maintain aspect ratio by setting height to auto */
+  display: block;           /* Ensure it displays as a block element */
+  box-sizing: border-box;   /* Include padding and border in element's total width and height */
+  margin-bottom: 50px;
+}
+.graph-container{
+margin-bottom: 20px;
+
 }
 
 /* Responsive adjustments */

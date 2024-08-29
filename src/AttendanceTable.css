@@ -1,44 +1,79 @@
-/* AttendanceTable.css */
+.attendance-table {
+  overflow-x: auto;
+  padding-bottom: 1rem;
+}
 
-.attendance-tables {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-  }
-  
-  .attendance-table {
-    overflow-x: auto;
-  }
-  
-  .attendance-table h4 {
-    text-align: center;
-    margin-bottom: 1rem;
-  }
-  
-  .attendance-table table {
-    width: 100%;
-    border-collapse: collapse;
-    margin: 0 auto;
-    background-color: #f8f9fa;
-  }
-  
-  .attendance-table th,
-  .attendance-table td {
-    border: 1px solid #dee2e6;
-    padding: 8px 12px;
-    text-align: center;
-  }
-  
-  .attendance-table th {
-    background-color: #343a40;
-    color: #fff;
-  }
-  
-  .present {
-    background-color: #d4edda;
-  }
-  
-  .absent {
-    background-color: #f8d7da;
-  }
-  
+.attendance-table h4 {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.table-wrapper {
+  position: relative;
+  overflow-x: auto;
+}
+
+.attendance-table table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #f8f9fa;
+  min-width: 800px; /* Ensures the table is wide enough for horizontal scrolling */
+  table-layout: fixed; /* Helps with responsiveness and fixed column widths */
+}
+
+.attendance-table th,
+.attendance-table td {
+  border: 1px solid #dee2e6;
+  padding: 8px 12px;
+  text-align: center;
+  white-space: nowrap; /* Prevents text from wrapping */
+  overflow: hidden; /* Ensures no overflow issues */
+}
+
+.attendance-table th {
+  background-color: #343a40;
+  color: #fff;
+  position: sticky;
+  top: 0; /* Fix the header row */
+  z-index: 3; /* Ensure the header is above other content */
+}
+
+.subject-header {
+  position: -webkit-sticky;
+  position: sticky;
+  left: 0;
+  background-color: #343a40;
+  color: #fff;
+  z-index: 2;
+}
+
+.subject-cell {
+  position: -webkit-sticky;
+  position: sticky;
+  left: 0;
+  background-color: #f8f9fa;
+  z-index: 1;
+  border-right: 2px solid #343a40; /* Optional: Adds a border to distinguish the fixed column */
+  min-width: 150px; /* Ensures the first column is wide enough */
+}
+
+.present {
+  background-color: #d4edda;
+}
+
+.absent {
+  background-color: #f8d7da;
+}
+
+.table-wrapper::-webkit-scrollbar {
+  height: 10px;
+}
+
+.table-wrapper::-webkit-scrollbar-thumb {
+  background: #888; 
+  border-radius: 5px;
+}
+
+.table-wrapper::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}

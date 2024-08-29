@@ -1,4 +1,3 @@
-
 import React from 'react';
 import './AttendanceTable.css';
 
@@ -9,14 +8,17 @@ const AttendanceTable = ({ attendanceData }) => {
 
   const { theory, practical, dates } = attendanceData;
 
+  // Ensure unique dates
+  const uniqueDates = [...new Set(dates)];
+
   const subjects = Object.keys(theory);
 
   const renderTableRows = (data) => {
-    return subjects.map(subject => {
+    return subjects.map((subject) => {
       let lastNumber = 0;
       return (
         <tr key={subject}>
-          <td>{subject}</td>
+          <td className="subject-cell">{subject}</td>
           {data[subject].map((attendance, index) => {
             if (attendance === 1) {
               lastNumber += 1;
@@ -36,31 +38,35 @@ const AttendanceTable = ({ attendanceData }) => {
     <div className="attendance-tables">
       <div className="attendance-table">
         <h4>Theory</h4>
-        <table>
-          <thead>
-            <tr>
-              <th>Subject</th>
-              {dates.map(date => <th key={date}>{date}</th>)}
-            </tr>
-          </thead>
-          <tbody>
-            {renderTableRows(theory)}
-          </tbody>
-        </table>
+        <div className="table-wrapper">
+          <table>
+            <thead>
+              <tr>
+                <th className="subject-header">Subject</th>
+                {uniqueDates.map((date) => (
+                  <th key={date}>{date}</th>
+                ))}
+              </tr>
+            </thead>
+            <tbody>{renderTableRows(theory)}</tbody>
+          </table>
+        </div>
       </div>
       <div className="attendance-table">
         <h4>Practical</h4>
-        <table>
-          <thead>
-            <tr>
-              <th>Subject</th>
-              {dates.map(date => <th key={date}>{date}</th>)}
-            </tr>
-          </thead>
-          <tbody>
-            {renderTableRows(practical)}
-          </tbody>
-        </table>
+        <div className="table-wrapper">
+          <table>
+            <thead>
+              <tr>
+                <th className="subject-header">Subject</th>
+                {uniqueDates.map((date) => (
+                  <th key={date}>{date}</th>
+                ))}
+              </tr>
+            </thead>
+            <tbody>{renderTableRows(practical)}</tbody>
+          </table>
+        </div>
       </div>
     </div>
   );
