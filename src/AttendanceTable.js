@@ -39,33 +39,37 @@ const AttendanceTable = ({ attendanceData }) => {
       <div className="attendance-table">
         <h4>Theory</h4>
         <div className="table-wrapper">
-          <table>
-            <thead>
-              <tr>
-                <th className="subject-header">Subject</th>
-                {uniqueDates.map((date) => (
-                  <th key={date}>{date}</th>
-                ))}
-              </tr>
-            </thead>
-            <tbody>{renderTableRows(theory)}</tbody>
-          </table>
+          <div className="table-responsive">
+            <table className="table table-bordered">
+              <thead>
+                <tr>
+                  <th className="subject-header">Subject</th>
+                  {uniqueDates.map((date) => (
+                    <th key={date}>{date}</th>
+                  ))}
+                </tr>
+              </thead>
+              <tbody>{renderTableRows(theory)}</tbody>
+            </table>
+          </div>
         </div>
       </div>
       <div className="attendance-table">
         <h4>Practical</h4>
         <div className="table-wrapper">
-          <table>
-            <thead>
-              <tr>
-                <th className="subject-header">Subject</th>
-                {uniqueDates.map((date) => (
-                  <th key={date}>{date}</th>
-                ))}
-              </tr>
-            </thead>
-            <tbody>{renderTableRows(practical)}</tbody>
-          </table>
+          <div className="table-responsive">
+            <table className="table table-bordered">
+              <thead>
+                <tr>
+                  <th className="subject-header">Subject</th>
+                  {uniqueDates.map((date) => (
+                    <th key={date}>{date}</th>
+                  ))}
+                </tr>
+              </thead>
+              <tbody>{renderTableRows(practical)}</tbody>
+            </table>
+          </div>
         </div>
       </div>
     </div>
